@@ -11,3 +11,12 @@ Add the component to your Hugo site's config:
 [[module.imports]]
 path = "github.com/gerardorn/hugo-mod-bootstrap-icons"
 ```
+
+Then call the icon with the `resources.Get` method
+```
+{{ with resources.Get "icons/bootstrap/bootstrap.svg" }}
+  <img src="{{ .RelPermalink }}" alt="Bootstrap" width="32" height="32">
+{{ end }}
+
+```
+
